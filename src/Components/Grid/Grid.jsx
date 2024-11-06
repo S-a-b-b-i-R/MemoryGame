@@ -1,7 +1,8 @@
 import { useState } from "react";
+import Cards from "../Cards/Cards";
 const Grid = () => {
     const [cardNumber, setCardNumber] = useState(9);
-    const numbers = [3, 9, 16];
+    const numbers = [9, 16, 25];
     return (
         <div className="">
             <div className="flex justify-center">
@@ -14,13 +15,14 @@ const Grid = () => {
                         className="dropdown-content menu bg-base-100 rounded-box z-[1] p-2 shadow left-1/2 transform -translate-x-1/2"
                     >
                         {numbers.map((item) => (
-                            <li key={item} onClick={(e) => setCardNumber(item)}>
+                            <li key={item} onClick={() => setCardNumber(item)}>
                                 <a>{item}</a>
                             </li>
                         ))}
                     </ul>
                 </div>
             </div>
+            <Cards cardNumber={cardNumber} />
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
                 {/* {cards.map((card, index) => (
                     <div
