@@ -8,7 +8,7 @@ const Grid = () => {
             <div className="flex justify-center">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn m-1">
-                        Click
+                        Grid Size
                     </div>
                     <ul
                         tabIndex={0}
